@@ -1,0 +1,92 @@
+@import '../../../../media\ query';
+
+.team {
+  width: 100%;
+  margin-bottom: var(--m-b-s);
+
+  .container {
+    .team-members {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2em;
+
+      @include breakPoints(mobile) {
+        flex-direction: column;
+      }
+
+      .member {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+
+        img {
+          width: 100%;
+
+
+        }
+
+        .info {
+          background-color: var(--card-bg-color);
+          box-shadow: 0px 9px 31px 6px rgb(0 0 0 / 20%);
+          padding: 1em;
+
+          h4 {
+            color: var(--light-color);
+            font-size: 1.2em;
+          }
+
+          p {
+            color: gray;
+          }
+        }
+
+        .S-M {
+          position: absolute;
+          bottom: 6em;
+          left: 0;
+          width: 100%;
+          display: none;
+          align-items: flex-end;
+          justify-content: center;
+          background-color: rgba(39, 39, 39, 0.103);
+          height: fill-available;
+
+          i {
+            font-size: 1em;
+            color: var(--light-color);
+            background-color: var(--dark-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+            margin: 2px;
+            transition: 0.5s;
+
+            &:hover {
+              background-color: var(--main-color);
+            }
+          }
+        }
+
+        &:hover {
+          cursor: pointer;
+
+          .S-M {
+            display: flex;
+            transition: 0.5s;
+
+          }
+
+          img {
+            filter: blur(3px);
+            transition: 0.3s;
+
+          }
+        }
+
+
+      }
+    }
+  }
+}

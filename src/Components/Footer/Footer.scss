@@ -1,0 +1,29 @@
+@import '../../media\ query';
+
+
+footer {
+  width: 100%;
+  background-color: var(--card-bg-color);
+  color: gray;
+  padding: 0.8em 0;
+  box-shadow: 0 -1px 5px #00000038;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    p {
+      text-align: center;
+
+      a {
+        text-decoration: none;
+        color: var(--main-color);
+
+        &:hover {
+          color: var(--light-color);
+        }
+      }
+    }
+  }
+}

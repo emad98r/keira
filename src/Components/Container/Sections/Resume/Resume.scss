@@ -1,0 +1,76 @@
+@import '../../../../media\ query';
+
+.resume {
+  width: 100%;
+  margin-bottom: var(--m-b-s);
+
+  .container {
+    .wrapper {
+      width: 100%;
+      display: flex;
+      align-items: flex-start;
+      gap: 2em;
+
+      @include breakPoints(mobile) {
+        flex-direction: column;
+      }
+
+      .info {
+        background-color: var(--card-bg-color);
+        padding: 1.5em 1em;
+        color: var(--light-color);
+
+        h3 {
+          margin-bottom: 1em;
+        }
+
+        p {
+          color: gray;
+          font-family: var(--title-prg);
+          margin-bottom: 1em;
+          font-size: 1.1em;
+        }
+
+        b {
+          font-weight: 400;
+          margin-bottom: 1em;
+          display: block;
+        }
+
+        hr {
+          margin: 1.5em 0;
+          width: 40%;
+          height: 3px;
+          border: none;
+          border-radius: 5px;
+
+        }
+
+        &:first-of-type {
+          border-top: 3px solid #ff3c3c;
+
+          hr {
+            background-color: #ff3c3c;
+          }
+        }
+
+        &:nth-of-type(2) {
+          border-top: 3px solid #ffdd04;
+
+          hr {
+            background-color: #ffdd04;
+          }
+        }
+
+        &:nth-of-type(3) {
+          border-top: 3px solid #16d4ff;
+
+          hr {
+            background-color: #16d4ff;
+          }
+        }
+      }
+
+    }
+  }
+}

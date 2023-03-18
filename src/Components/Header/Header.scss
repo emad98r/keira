@@ -1,0 +1,149 @@
+@import '../../media\ query';
+
+header {
+  width: 100%;
+  padding: 1em 0;
+  background-color: var(--dark-color);
+  border-bottom: 1px solid var(--main-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+
+  .container {
+    display: flex;
+    color: var(--light-color);
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.logo {
+  font-size: 2em;
+  font-family: var(--title-prg);
+  font-weight: 600;
+}
+
+.logo spam {
+  color: var(--main-color);
+}
+
+i {
+  font-size: 2em;
+  cursor: pointer;
+}
+
+.close-list {
+  display: none;
+}
+
+nav {
+  position: fixed;
+  top: 5.2em;
+  left: 0;
+  width: 100%;
+  height: 89vh;
+  z-index: 10;
+  background-color: var(--card-bg-color);
+  color: gray;
+  display: none;
+  align-items: center;
+  justify-content: space-around;
+  font-family: var(--title-prg);
+
+  @include breakPoints(mobile) {
+    flex-direction: column;
+    padding: 0 1em;
+    height: 100vh;
+  }
+
+
+  >ul {
+    overflow-y: scroll;
+    height: 50%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    li {
+      cursor: pointer;
+
+      .home-list {
+        display: none;
+      }
+
+      &:hover {
+        color: var(--main-color);
+      }
+
+    }
+
+    @include breakPoints(mobile) {
+      width: 100%;
+      align-items: flex-start;
+    }
+
+    &::-webkit-scrollbar {
+      width: 5px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--main-color);
+      border-radius: 8px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: #ccc;
+      border-radius: 8px;
+    }
+
+    scrollbar-width: thin;
+    scrollbar-color: #ccc #f1f1f1;
+  }
+
+  .info {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include breakPoints(mobile) {
+      width: 100%;
+      align-items: flex-start;
+
+    }
+
+    div {
+      width: 50%;
+      margin-bottom: 1em;
+
+      b {
+        text-transform: uppercase;
+        font-size: 1.5em;
+        color: var(--light-color);
+        margin-bottom: 0.5em;
+      }
+    }
+  }
+}
+
+nav ul li {
+  list-style: number;
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: capitalize;
+  padding: 0.2em 0;
+  list-style-position: inside;
+
+  &::marker {
+    font-size: 0.7em;
+    margin-right: 1em;
+  }
+
+}
+
+
+.home-list {
+  transition: all 1s;
+}

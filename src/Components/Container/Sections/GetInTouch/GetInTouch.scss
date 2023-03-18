@@ -1,0 +1,170 @@
+@import '../../../../media\ query';
+
+
+.get-in-touch {
+  width: 100%;
+  margin-bottom: var(--m-b-s);
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .title {
+      align-self: flex-start;
+    }
+
+    .wrapper {
+      display: flex;
+      align-items: flex-start;
+      width: 100%;
+      gap: 2em;
+      color: var(--light-color);
+      margin-bottom: 4em;
+
+      @include breakPoints(mobile) {
+        flex-direction: column;
+      }
+
+      @include breakPoints(small) {
+        flex-direction: column;
+      }
+
+      .info {
+        width: 30%;
+        border: 1px solid #80808042;
+        padding: 1.7em 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        @include breakPoints(mobile) {
+          width: 100%;
+        }
+
+        @include breakPoints(small) {
+          width: 100%;
+        }
+
+        .data {
+          text-align: center;
+          margin-bottom: 1.5em;
+
+          h4 {
+            font-size: 1.2em;
+            font-weight: 400;
+          }
+
+          p {
+            font-family: var(--title-prg);
+            color: gray;
+          }
+        }
+      }
+
+      form {
+        width: 70%;
+
+        @include breakPoints(mobile) {
+          width: 100%;
+        }
+
+        @include breakPoints(small) {
+          width: 100%;
+        }
+
+        .user-info {
+          display: flex;
+          width: 100%;
+          align-items: center;
+          justify-content: space-between;
+          gap: 2em;
+          margin-bottom: 2em;
+
+          @include breakPoints(mobile) {
+            flex-direction: column;
+          }
+
+          input {
+            background-color: transparent;
+            border: 1px solid #80808042;
+            color: var(--light-color);
+            padding: 1em 0;
+            width: 100%;
+            text-align: center;
+            font-family: var(--light-color);
+            font-size: 1em;
+          }
+
+        }
+
+        textarea {
+          background-color: transparent;
+          border: 1px solid #80808042;
+          font-size: 1em;
+          color: var(--light-color);
+          padding: 1em 0;
+          width: 100%;
+          text-align: center;
+          font-family: var(--light-color);
+          resize: none;
+          margin-bottom: 1em;
+        }
+
+        button {
+          background-color: var(--card-bg-color);
+          color: var(--light-color);
+          width: 30%;
+          padding: 0.7em 0;
+          border: none;
+          font-family: var(--title-prg);
+          font-size: 1.1em;
+          cursor: pointer;
+          transition: 0.5s;
+
+          @include breakPoints(mobile) {
+            width: 100%;
+          }
+
+          svg {
+            margin-right: 1em;
+          }
+
+          &:hover {
+            background-color: var(--main-color);
+          }
+
+        }
+
+      }
+    }
+
+    .S-M {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      i {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--card-bg-color);
+        color: var(--light-color);
+        font-size: 1em;
+        padding: 15px;
+        margin: 2px;
+        transition: 0.5s;
+
+
+
+
+        &:hover {
+          background-color: var(--main-color);
+        }
+      }
+
+    }
+  }
+}

@@ -1,0 +1,91 @@
+@import '../../../../media\ query';
+
+.services {
+  width: 100%;
+  margin-bottom: var(--m-b-s);
+
+  .container {
+    .numbers {
+      width: 100%;
+      background-color: var(--card-bg-color);
+      color: var(--light-color);
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(14em, 1fr));
+      padding: 2em;
+
+      .card {
+        background-color: var(--dark-color);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 3em 0;
+
+        &:nth-of-type(2) {
+          position: relative;
+
+          &::before,
+          &::after {
+            content: '';
+            position: absolute;
+            width: 1px;
+            height: 80%;
+            background-color: gray;
+
+            @include breakPoints(mobile) {
+              width: 80%;
+              height: 1px;
+            }
+          }
+
+          &::before {
+            top: 10%;
+            left: 0;
+
+            @include breakPoints(mobile) {
+              top: 0;
+              left: 10%;
+            }
+          }
+
+          &::after {
+            top: 10%;
+            right: 0;
+
+            @include breakPoints(mobile) {
+              top: 100%;
+              right: 10%;
+            }
+          }
+        }
+
+        b {
+          font-size: 3em;
+          font-family: var(--title-prg);
+          color: gray;
+          margin-bottom: 1em;
+
+          @include breakPoints(mobile) {
+            font-size: 2em;
+            margin-bottom: 0.5em;
+          }
+
+          span {
+            color: var(--main-color);
+          }
+        }
+
+        p {
+          font-size: 1.5em;
+          font-weight: 700;
+
+          @include breakPoints(mobile) {
+            font-size: 1em;
+          }
+        }
+
+      }
+
+    }
+  }
+}

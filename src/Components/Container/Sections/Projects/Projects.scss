@@ -1,0 +1,38 @@
+@import '../../../../media\ query';
+
+.projects {
+  margin-bottom: var(--m-b-s);
+
+  .container {
+    .small-cont {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      gap: 2em;
+
+
+      .first-row {
+        gap: 2em;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+
+        @include breakPoints(mobile) {
+          flex-direction: column;
+        }
+      }
+
+      .second-row {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 2em;
+
+        @include breakPoints(mobile) {
+          flex-direction: column;
+        }
+      }
+
+    }
+  }
+}

@@ -1,0 +1,79 @@
+@import '../../../../media\ query';
+
+.Recent-Blogs {
+  width: 100%;
+  margin-bottom: var(--m-b-s);
+
+  .container {
+    .wrapper {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2em;
+
+      @include breakPoints(mobile) {
+        flex-direction: column;
+      }
+
+
+      .card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        box-shadow: 0px 9px 31px 6px rgb(0 0 0 / 20%);
+        cursor: pointer;
+
+
+        img {
+          width: 100%;
+          object-fit: cover;
+        }
+
+        .info {
+          background-color: var(--card-bg-color);
+          padding: 1em;
+
+          h4 {
+            color: var(--light-color);
+            margin-bottom: 1em;
+            font-size: 1.2em;
+          }
+
+          p {
+            color: gray;
+            line-height: 2;
+          }
+        }
+
+        &::after {
+          content: '';
+          width: 0;
+          height: 3px;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          transition: 0.5s;
+
+        }
+
+        &:first-of-type:hover::after {
+          width: 100%;
+          background-color: red;
+        }
+
+        &:nth-of-type(2):hover::after {
+          width: 100%;
+          background-color: rgb(220, 255, 23);
+        }
+
+        &:last-of-type:hover::after {
+          width: 100%;
+          background-color: rgb(10, 255, 255);
+        }
+      }
+    }
+
+  }
+}

@@ -1,0 +1,8 @@
+export { default as AboutMe } from './AboutMe/AboutMe'
+export { default as GetInTouch } from './GetInTouch/GetInTouch'
+export { default as Hero } from './Hero/Hero'
+export { default as OurTeam } from './OurTeam/OurTeam'
+export { default as Projects } from './Projects/Projects'
+export { default as RecentBlogs } from './RecentBlogs/RecentBlogs'
+export { default as Resume } from './Resume/Resume'
+export { default as Services } from './Services/Services'

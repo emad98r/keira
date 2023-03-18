@@ -1,0 +1,42 @@
+@import '../../media\ query';
+
+.Service-cards {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
+  gap: 2em;
+  margin-bottom: 3em;
+
+  .card {
+    width: 100%;
+    background-color: var(--card-bg-color);
+    color: var(--light-color);
+    padding: 1.5em 1em;
+    border-radius: 15px;
+    border: 1px solid rgb(59, 59, 59);
+    box-shadow: 0px 9px 31px 6px rgb(0 0 0 / 20%);
+    position: relative;
+
+    @include breakPoints(mobile) {
+      width: 100%;
+    }
+
+    i {
+      font-size: 3em;
+    }
+
+    h2 {
+      font-size: 2em;
+      font-weight: 400;
+      margin-bottom: 0.5em;
+
+    }
+
+    p {
+      font-family: var(--title-prg);
+      font-size: 1.1em;
+      color: gray;
+    }
+
+  }
+}

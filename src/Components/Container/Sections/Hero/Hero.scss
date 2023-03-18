@@ -1,0 +1,124 @@
+@import '../../../../media\ query';
+
+
+.hero {
+  width: 100%;
+  height: 100vh;
+  background-image: url('../../../../Images/hero\ bg.jpg');
+  background-size: cover;
+  margin-bottom: var(--m-b-s);
+
+  @include breakPoints(mobile) {
+    background-position: center;
+  }
+
+  @include breakPoints(small) {
+    background-position: center;
+  }
+
+  .container {
+    height: 100vh;
+    color: var(--light-color);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+
+    .info {
+      h4 {
+        font-size: 1.5em;
+        font-weight: 400;
+        position: relative;
+        margin-left: 1em;
+
+        @include breakPoints(mobile) {
+          font-size: 1em;
+        }
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: -0.7em;
+          width: 0.7em;
+          height: 3px;
+          background-color: gray;
+          transform: translate(-50%, -50%);
+        }
+      }
+
+      .skills {
+        color: transparent;
+        font-size: 7em;
+        -webkit-text-stroke: 2px var(--light-color);
+        transition: all 1s ease-in-out;
+
+        @include breakPoints(mobile) {
+          font-size: 2.5em;
+        }
+
+        @include breakPoints(small) {
+          font-size: 3.5em;
+          margin-bottom: 1.5em;
+        }
+      }
+    }
+
+    .country {
+      display: flex;
+      align-items: center;
+
+      @include breakPoints(mobile) {
+        flex-direction: column;
+      }
+
+      @include breakPoints(small) {
+        flex-direction: column;
+      }
+
+      .city {
+        border-left: 5px solid var(--main-color);
+        padding-left: 1em;
+        font-size: 1.2em;
+        border-radius: 10px;
+
+
+        &:nth-of-type(2) {
+          margin: 0 1em;
+
+          @include breakPoints(mobile) {
+            margin: 0;
+            margin-bottom: 1em;
+          }
+
+          @include breakPoints(small) {
+            margin: 0;
+            margin-bottom: 1em;
+          }
+        }
+
+        @include breakPoints(mobile) {
+          margin-bottom: 1em;
+        }
+
+        @include breakPoints(small) {
+          margin-bottom: 1em;
+        }
+
+        h5 {
+          font-weight: 400;
+
+
+        }
+
+        p {
+          margin-left: 0.5em;
+          font-size: 0.8em;
+          font-weight: 700;
+
+
+        }
+      }
+    }
+  }
+}
